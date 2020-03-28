@@ -1,0 +1,30 @@
+
+package javacoda1;
+
+
+import java.io.*;
+
+
+public class JavaCoda1 {
+
+    public static void main(String[] args) {
+        
+        Coda codaOrdinazioni = new Coda();
+        Ordine ord;
+        int i=0;
+        boolean continua=false;
+        while(i<3){
+        ord = new Ordine("o","o");
+        
+        codaOrdinazioni.aggiungi(ord);
+        ord.stampa();
+        System.out.println("Ordine inserito con successo");
+            
+        ord=(Ordine)codaOrdinazioni.togli();
+        
+           ord.stampa();
+        
+        i++;
+        }
+    }
+}
