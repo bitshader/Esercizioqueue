@@ -1,4 +1,3 @@
-
 package javacoda1;
 
 import java.io.*;
