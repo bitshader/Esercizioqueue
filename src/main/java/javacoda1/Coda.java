@@ -1,13 +1,14 @@
 package javacoda1;
 
-import java.util.*;
+import java.util.Vector;
+
 public class Coda {
     private final Vector elementi;
     public Coda(){
         elementi = new Vector();
     }
     public void aggiungi(final Object obj){
-        elementi.addElement(obj);  
+        elementi.addElement(obj);
     }
     public Object togli(){
         Object obj = null;
