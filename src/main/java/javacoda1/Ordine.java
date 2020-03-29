@@ -1,18 +1,19 @@
 package javacoda1;
 
 import java.io.*;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+
 
 public final class Ordine {
     private String Tavolo;
     private String Ordine;
     private String nome_Cameriere;
-    public Ordine(String tavolo,String ordine,String nome){
+    private int Numero_sc;
+  
+    public Ordine(String tavolo,String ordine,String nome,int numero){
         tavolo = inserisci_tavolo();
         ordine = inserisci_ordine();
         nome = inserisci_nome();
-      
+        Numero_sc = numero;
     }
     public String inserisci_ordine(){
         final InputStreamReader input = new InputStreamReader (System.in);
@@ -64,47 +65,22 @@ public final class Ordine {
        
     }
     
+
     public void stampa(){
         System.out.println("Tavolo:"+Tavolo);
         System.out.println("Ordine:"+Ordine);
         
     }
-
-    
-        
-        public void OraCorrente(){
-            
-            final Calendar calendar = new GregorianCalendar();
-            
-            String orario;
    
-         
-            final int giorno = calendar.get(Calendar.DAY_OF_MONTH);
-            final int mese = calendar.get(Calendar.MONTH);
-            final int anno = calendar.get(Calendar.YEAR);
-            
-
-            final int ore = calendar.get(Calendar.HOUR);
-            final int minuti = calendar.get(Calendar.MINUTE);
-            final int secondi = calendar.get(Calendar.SECOND);
-            
-            if(calendar.get(Calendar.AM_PM) == 0)
-            orario = "A.M.";
-            else
-            orario = "P.M.";
-
-            System.out.println("Orario"+ore+":"+minuti+":"+secondi+" "+orario);
-            System.out.println("Data:"+giorno+"/"+mese+"/"+anno);
-
-            }
-       
+	
     public void stampa_scontrino(){
-        OraCorrente dataOrario = new OraCorrente();
+        
         System.out.println("********************");
         System.out.println("Ordine:\t"+Ordine);
         System.out.println("Tavolo:\t"+Tavolo);
-        System.out.println("Scontrino stampato:");
-        System.out.println(dataOrario);
+        System.out.println("N* scontrino\t"+Numero_sc);
+        System.out.println("Scontrino stampato");
+        System.out.println("********************");
 
     }
   
