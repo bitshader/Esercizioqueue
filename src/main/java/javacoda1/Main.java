@@ -7,8 +7,8 @@ public class Main {
         final Coda codaOrdinazioni = new Coda();
         Ordine ord;
         int i = 0;
-        while(i<3){
-        ord = new Ordine("o","o");
+        while(i<1){
+        ord = new Ordine("null","null","null");
         
         codaOrdinazioni.aggiungi(ord);
         ord.stampa();
@@ -16,7 +16,7 @@ public class Main {
             
         ord=(Ordine)codaOrdinazioni.togli();
         
-        ord.stampa();
+        ord.stampa_scontrino();
         
         i++;
         }
